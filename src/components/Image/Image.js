@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import testP1 from '../../assets/images/testP1.PNG';
 import label from '../../assets/images/label.PNG';
-import { render } from 'react-dom';
+import Scroll from 'react-scroll';
 
-function Image({ currentPage }) {
+
+function Image({ currentPage, executeScroll }) {
+
 
     const renderLilNav = () => {
         
         if (currentPage === 'aboutus'){
             return (
                 <div className="utop">
-                    <p className="lilNavText">VALUES</p>
-                    <p className="lilNavText">TEAM</p>
-                    <p className="lilNavText">APPROACH</p>
+                    <a href="#values" className="noStyle lilNavText">VALUES</a>
+                    <a href="#team" className="noStyle lilNavText">TEAM</a>
+                    <a href="#approach" className="noStyle lilNavText">APPROACH</a>
                 </div>
             )
         } else if (currentPage === 'developments'){

@@ -1,6 +1,6 @@
 import './App.css';
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import Header from './components/Header/Header';
@@ -12,6 +12,8 @@ import Develop from './components/pages/Develop';
 import Property from './components/pages/Property';
 import Contact from './components/pages/Contact';
 
+
+
 function App() {
 
   const [currentPage, setPage ] = useState('');
@@ -22,7 +24,7 @@ function App() {
       <Router>
         <div className="fullVP">
           <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-          <Image currentPage={currentPage} />
+          <Image currentPage={currentPage}/>
         </div>
         <Route exact path='/aboutus'>
           <AboutUs />
