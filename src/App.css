@@ -149,6 +149,7 @@ html, body {
   z-index: 9;
   display: flex;
   justify-content: center;
+  transition: 1s;
 }
 
 .utop2 {
@@ -159,6 +160,7 @@ html, body {
   z-index: 9;
   display: flex;
   justify-content: center;
+  transition: 1s;
 }
 
 .box {

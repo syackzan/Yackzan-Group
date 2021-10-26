@@ -9,7 +9,7 @@ function Image({ currentPage, executeScroll }) {
 
 
     const renderLilNav = () => {
-        
+
         if (currentPage === 'aboutus'){
             return (
                 <div className="utop">
@@ -27,13 +27,13 @@ function Image({ currentPage, executeScroll }) {
         } else if (currentPage === 'property'){
             return (
                 <div className="utop">
-                    <p className="lilNavText">Projects</p>
+                    <p className="lilNavText">PROJECTS</p>
                 </div>
             )
         } else if (currentPage === 'contact'){
             return (
                 <div className="utop">
-                    <p className="lilNavText">contact</p>
+                    <p className="lilNavText">CONTACT</p>
                 </div>
             )
         } else {

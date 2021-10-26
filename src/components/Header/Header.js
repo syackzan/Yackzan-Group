@@ -20,6 +20,7 @@ function Header({ currentPage, handlePageChange }) {
         setSideNavDisplay('')
         handlePageChange(page);
 
+        window.location.reload();
     }
 
     return (
