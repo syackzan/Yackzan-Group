@@ -17,7 +17,7 @@ function App() {
       <Router>
         <div className="fullVP">
           <Header currentPage={currentPage} handlePageChange={handlePageChange} />
-          <Image />
+          <Image currentPage={currentPage} />
         </div>
         <Footer />
       </Router>
