@@ -15,23 +15,26 @@ function Header({ currentPage, handlePageChange }) {
     const showSideNav = () => setSideNavDisplay('t');
     const closeSideNav = () => setSideNavDisplay('');
 
-    let aboutUs = false;
+    function changeNav (page){
 
-    
+        setSideNavDisplay('')
+        handlePageChange(page);
+
+    }
 
     return (
         <>
-            <Navbar className="20Percent align-items-stretch p-0">
-                <Container className="d-flex justify-content-center navContainer">
-                    <Navbar.Brand className="navImage" onClick={() => handlePageChange('')}>
+            <header className="header">
+                <div className="container navContainer h-100">
+                    <div onClick={() => handlePageChange('')}>
                         <Link to='/'><img src={ygLogo} alt="YG Logo" /></Link>
-                    </Navbar.Brand>
-                    <Nav className="d-flex flex-wrap justify-content-center webDisplay align-items-center">
-                        <div className={currentPage === 'aboutus' ? ("active") : ("flexIt")}> 
+                    </div>
+                    <div className="navlinks webDisplay">
+                        <div className={currentPage === 'aboutus' ? ("active") : ("flexIt")}>
                             <Link className={currentPage === 'aboutus' ? ("noStyle activeText p-2") : ("m-1 navText noStyle")} to="/aboutus" onClick={() => handlePageChange('aboutus')}>About Us</Link>
-                        </div> 
+                        </div>
                         <div className={currentPage === 'developments' ? ("active") : ("flexIt")}>
-                            <Link className={currentPage === 'developments' ? ("noStyle activeText p-2") : ("m-1 navText noStyle")} to="/developments" onClick={() => handlePageChange('developments')} onClick={() => handlePageChange('developments')}>Developments</Link>
+                            <Link className={currentPage === 'developments' ? ("noStyle activeText p-2") : ("m-1 navText noStyle")} to="/developments" onClick={() => handlePageChange('developments')}>Developments</Link>
                         </div>
                         <div className={currentPage === 'property' ? ("active") : ("flexIt")}>
                             <Link className={currentPage === 'property' ? ("noStyle activeText p-2") : ("m-1 navText noStyle")} to="/properties" onClick={() => handlePageChange('property')}>Property Management</Link>
@@ -39,12 +42,32 @@ function Header({ currentPage, handlePageChange }) {
                         <div className={currentPage === 'contact' ? ("active") : ("flexIt")}>
                             <Link className={currentPage === 'contact' ? ("noStyle activeText p-2") : ("m-1 navText noStyle")} to="/contact" onClick={() => handlePageChange('contact')}>Contact Us</Link>
                         </div>
-                    </Nav>
+                    </div>
+                    <div></div>
                     <div className="phoneDisplay">
                         <button onClick={showSideNav}>☰</button>
                     </div>
-                </Container>
-            </Navbar>
+                </div>
+                <div className={sidenavDisplay ? ("sidenav displayYes") : ("displayNo")}>
+                    <div className="d-flex justify-content-end m-1">
+                        <button className="" onClick={closeSideNav}>x</button>
+                    </div>
+                    <ul className="nav nav-tabs display-flex flex-column align-items-center">
+                        <li className="sidenav-item">
+                            <Link className="sidenavStyle" to="/aboutus" onClick={() => changeNav('aboutus')}>About Us</Link>
+                        </li>
+                        <li className="sidenav-item">
+                            <Link className="sidenavStyle" to="/developments" onClick={() => changeNav('developments')}>Developments</Link>
+                        </li>
+                        <li className="sidenav-item">
+                            <Link className="sidenavStyle" to="/properties" onClick={() => changeNav('property')}>Property Management</Link>
+                        </li>
+                        <li className="sidenav-item">
+                            <Link className="sidenavStyle" to="/contact" onClick={() => changeNav('contact')}>Contact Us</Link>
+                        </li>
+                    </ul>
+                </div>
+            </header>
         </>
     )
 }

@@ -51,17 +51,25 @@ html, body {
 }
 
 .navContainer {
+  padding: 0px;
+  margin: 0px;
   padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.navImage {
-  padding-right: 30px;
+.navlinks {
+  height: 100%;
+  display: flex;
+  align-items: stretch;
 }
 
 .noStyle {
   text-decoration: none;
   width: 100%;
 }
+
 
 .navText {
   font-size: 22px;
@@ -89,8 +97,28 @@ html, body {
   font-weight: bold;
 }
 
-.webDisplay {
-  height: 100%;
+.sidenav {
+  height: 100%;  
+  width: 100%;  
+  position: fixed; 
+  z-index: 900; 
+  top: 0; 
+  right: 0; 
+  background-color: forestgreen; 
+  transition: .5s ease; 
+  overflow-x: hidden; 
+  padding-top: 10px;  
+}
+
+.sidenav-item {
+  margin: 0px 5px;
+  padding: 5px;
+}
+
+.sidenavStyle {
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
 }
 
 .stylingImageDiv{
@@ -99,8 +127,8 @@ html, body {
   position: relative;
 }
 
-.navbarHeight {
-  height: 20%;
+.header {
+  height: 80px;
 }
 
 .imageStyle {
@@ -181,10 +209,34 @@ html, body {
   border-top: 2px solid var(--navColor);
 }
 
-@media only screen and (max-width: 985px){
+@media only screen and (max-width: 992px){
   .phoneDisplay{
     display: block;
   }
+}
+
+@media only screen and (max-width: 992px) {
+  .webDisplay {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 992px){
+  .navContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (max-width: 531px){
+  .half {
+    height: auto;
+    width: 80%;
+  }
+}
+
+.noStyle:hover {
+  color: white;
 }
 
 .flexIt:hover {
