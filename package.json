@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "develop": "cd client && npm start"
+    "develop": "cd client && npm start",
+    "heroku-postbuild": "npm run build",
+    "build": "cd client && npm run build"
   },
   "repository": {
     "type": "git",
