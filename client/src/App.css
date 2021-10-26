@@ -58,8 +58,38 @@ html, body {
   padding-right: 30px;
 }
 
+.noStyle {
+  text-decoration: none;
+  width: 100%;
+}
+
 .navText {
   font-size: 22px;
+  color: gray;
+}
+
+.flexIt {
+  display: flex;
+  align-items: center;
+  height: 100%;;
+}
+
+.active {
+  background-color: green;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+
+.activeText {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+}
+
+.webDisplay {
+  height: 100%;
 }
 
 .stylingImageDiv{
@@ -77,6 +107,10 @@ html, body {
   height: 80%;
 }
 
+.setPos {
+  position: relative;
+}
+
 .utop {
   position: absolute;
   top: 0;
@@ -87,6 +121,28 @@ html, body {
   z-index: 9;
   display: flex;
   justify-content: center;
+}
+
+.utop2 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: fit-content;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  background-color: green;
+  width: 60%;
+  color: green;
+}
+
+.lilNavText {
+  margin: 1px 20px;
+  color: white;
+  font-size: 20px;
 }
 
 .full {
@@ -128,4 +184,8 @@ html, body {
   .phoneDisplay{
     display: block;
   }
+}
+
+.flexIt:hover {
+  background-color: lightgray;
 }
